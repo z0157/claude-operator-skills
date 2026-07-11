@@ -1,0 +1,61 @@
+# Operator Skills — Claude Code skills for building things that make money
+
+Three free, production-grade skills for [Claude Code](https://claude.com/claude-code) —
+distilled from real working pipelines, not voice-dumped guesses. Every pattern in
+these files has actually run: the lead finder has pulled 300+ real businesses per
+city, the research miner has processed 100-video channels, the govcon scout has
+queried real federal award data.
+
+## The skills
+
+| Skill | What Claude learns to do |
+|---|---|
+| **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe & mine any YouTube video or entire channel — no API, no Whisper. Correct VTT dedupe (the part everyone gets wrong), channel-scale distillation, claim extraction. |
+| **[local-lead-finder](skills/local-lead-finder/SKILL.md)** | Find businesses with **no website** in any city, free (OpenStreetMap). Opportunity scoring, chain/franchise filtering, phone/address enrichment. |
+| **[govcon-scout](skills/govcon-scout/SKILL.md)** | Research what the U.S. government buys and who wins — real award data by category/size/state (USAspending, no key) + live bid opportunities (SAM.gov). |
+
+## Install
+
+Drop any skill folder into your skills directory:
+
+```bash
+# personal (all projects)
+git clone https://github.com/z0157/claude-operator-skills
+cp -r claude-operator-skills/skills/* ~/.claude/skills/
+
+# or per-project
+cp -r claude-operator-skills/skills/* .claude/skills/
+```
+
+Then just ask Claude Code naturally — "find businesses without websites in
+Boise", "transcribe this channel and find every revenue claim" — and it uses
+the skill.
+
+## Why these are different
+
+Most skills for sale are prompts wearing a trench coat. These encode the
+**gotchas that cost hours**: why auto-caption VTTs duplicate every line and the
+exact dedupe that fixes it; why OSM "no website" false-positives on franchises
+and the denylist that filters them; why SAM.gov's DEMO_KEY 404s and what
+actually works. That's the difference between a skill that demos well and one
+that ships.
+
+## The full Operator Stack (10 skills)
+
+The paid stack adds the **build-and-sell layer** — the skills that turn leads
+and research into products and revenue:
+
+- **client-site-builder** — polished single-file websites for local businesses (themed by industry, schema.org, mobile-verified)
+- **cold-outreach-drafter** — "I already built you something" outreach with CAN-SPAM/TCPA rails baked in
+- **pdf-product-factory** — sellable PDF products (forms, bundles, workbooks) from HTML/CSS at catalog scale
+- **spreadsheet-tool-builder** — Excel calculators with verified formulas (the anti-slop moat)
+- **stripe-no-sdk** — payments, subscriptions & payment links in plain REST
+- **micro-dashboard** — one-file Flask + SQLite control panels for any pipeline
+- **niche-demand-scout** — validate demand *before* building; score niches, write listing copy
+
+**→ Full stack: $34, launching this week — the link lands here and in
+[Releases](../../releases). Star or watch the repo to catch it.**
+
+## License
+
+Free skills: MIT — use them anywhere, including commercially.
