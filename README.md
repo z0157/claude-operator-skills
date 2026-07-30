@@ -1,4 +1,24 @@
-# Operator Skills — Claude Code skills for building things that make money
+<p align="center">
+  <img src=".github/assets/logo.jpg" alt="Operator Skills" width="140">
+</p>
+
+<h1 align="center">Operator Skills</h1>
+
+<p align="center">
+  Claude Code skills for building things that make money.<br>
+  <a href="https://opforge.gumroad.com/l/operator-skills-free">Download as zip</a> ·
+  <a href="https://opforge.gumroad.com/l/operator-stack">Full 11-skill stack</a> ·
+  <a href="#install">Install</a>
+</p>
+
+<p align="center">
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="Skills: 4" src="https://img.shields.io/badge/skills-4-38bdf8.svg">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-ready-a78bfa.svg">
+</p>
+
+---
+
 
 Four free, production-grade skills for [Claude Code](https://claude.com/claude-code) —
 distilled from real working pipelines, not voice-dumped guesses. Every pattern in
@@ -14,6 +34,8 @@ queried real federal award data.
 | **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe & mine any YouTube video or entire channel — no API. Correct VTT dedupe (the part everyone gets wrong), channel-scale distillation, claim extraction. |
 | **[local-lead-finder](skills/local-lead-finder/SKILL.md)** | Find businesses with **no website** in any city, free (OpenStreetMap). Opportunity scoring, chain/franchise filtering, phone/address enrichment. |
 | **[govcon-scout](skills/govcon-scout/SKILL.md)** | Research what the U.S. government buys and who wins — real award data by category/size/state (USAspending, no key) + live bid opportunities (SAM.gov). |
+
+<a name="install"></a>
 
 ## Install
 
