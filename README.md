@@ -54,8 +54,12 @@ and research into products and revenue:
 - **micro-dashboard** — one-file Flask + SQLite control panels for any pipeline
 - **niche-demand-scout** — validate demand *before* building; score niches, write listing copy
 
-**→ Full stack: $34, launching this week — the link lands here and in
-[Releases](../../releases). Star or watch the repo to catch it.**
+**→ [Get the full Operator Stack — $34](https://opforge.gumroad.com/l/operator-stack)**
+· instant download · free updates · commercial license.
+
+Prefer to try first? **[Grab these 4 free skills as a zip](https://opforge.gumroad.com/l/operator-skills-free)**
+(pay what you want, $0 works) — same files as this repo, and you'll hear about
+new skills when they land.
 
 ## License
 
