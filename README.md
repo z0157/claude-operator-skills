@@ -39,20 +39,26 @@ queried real federal award data.
 
 ## Install
 
-Drop any skill folder into your skills directory:
+**As a plugin (recommended)** — inside Claude Code:
 
-```bash
-# personal (all projects)
-git clone https://github.com/z0157/claude-operator-skills
-cp -r claude-operator-skills/skills/* ~/.claude/skills/
-
-# or per-project
-cp -r claude-operator-skills/skills/* .claude/skills/
+```
+/plugin marketplace add z0157/claude-operator-skills
+/plugin install operator-skills@opforge
 ```
 
-Then just ask Claude Code naturally — "find businesses without websites in
-Boise", "transcribe this channel and find every revenue claim" — and it uses
-the skill.
+That's it. You get all four skills, and `/plugin update` pulls new ones as
+they land.
+
+**Or copy the files manually**, if you'd rather not add a marketplace:
+
+```bash
+git clone https://github.com/z0157/claude-operator-skills
+cp -r claude-operator-skills/skills/* ~/.claude/skills/   # all projects
+```
+
+Either way, just ask Claude Code naturally — "find businesses without websites
+in Boise", "transcribe this channel and find every revenue claim" — and it
+loads the right skill on its own.
 
 ## Why these are different
 

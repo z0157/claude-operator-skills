@@ -1,0 +1,23 @@
+{
+  "name": "operator-skills",
+  "displayName": "Operator Skills",
+  "version": "1.1.0",
+  "description": "Research and lead-generation skills for Claude Code: transcribe any media, mine YouTube channels at scale, find local businesses with no website, and query US federal contract data.",
+  "author": {
+    "name": "z0157",
+    "url": "https://github.com/z0157"
+  },
+  "homepage": "https://github.com/z0157/claude-operator-skills",
+  "repository": "https://github.com/z0157/claude-operator-skills",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "transcription",
+    "lead-generation",
+    "openstreetmap",
+    "government-contracts",
+    "web-scraping",
+    "automation"
+  ],
+  "skills": "./skills/"
+}
