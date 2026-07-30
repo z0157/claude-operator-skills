@@ -5,7 +5,7 @@
 <h1 align="center">Operator Skills</h1>
 
 <p align="center">
-  Claude Code skills for building things that make money.<br>
+  Engineering-grade skills for Claude Code: research, lead generation,<br>and product construction.<br>
   <a href="https://opforge.gumroad.com/l/operator-skills-free">Download as zip</a> ·
   <a href="https://opforge.gumroad.com/l/operator-stack">Full 11-skill stack</a> ·
   <a href="#install">Install</a>
@@ -20,11 +20,20 @@
 ---
 
 
-Four free, production-grade skills for [Claude Code](https://claude.com/claude-code) —
-distilled from real working pipelines, not voice-dumped guesses. Every pattern in
-these files has actually run: the lead finder has pulled 300+ real businesses per
-city, the research miner has processed 100-video channels, the govcon scout has
-queried real federal award data.
+Four MIT-licensed skills for [Claude Code](https://claude.com/claude-code), each
+derived from a pipeline in active use rather than composed speculatively. Every
+procedure documented here has been executed against live systems: the lead
+finder against OpenStreetMap's Overpass endpoint at roughly 300 records per
+metro, the research miner across 100-video channel archives, the contract scout
+against USAspending's award API.
+
+What these files encode is not capability but **failure modes**. Calling the
+APIs is the easy part. The cost is in discovering that auto-generated caption
+tracks are emitted as rolling cues that triple your token count under naive
+parsing; that OpenStreetMap's absent-website attribute is a false positive on
+franchise locations; that SAM.gov answers an unprovisioned key with a 404
+rather than a 401. Each skill carries the correction inline, with the reasoning
+intact.
 
 ## The skills
 
@@ -62,17 +71,19 @@ loads the right skill on its own.
 
 ## Why these are different
 
-Most skills for sale are prompts wearing a trench coat. These encode the
-**gotchas that cost hours**: why auto-caption VTTs duplicate every line and the
-exact dedupe that fixes it; why OSM "no website" false-positives on franchises
-and the denylist that filters them; why SAM.gov's DEMO_KEY 404s and what
-actually works. That's the difference between a skill that demos well and one
-that ships.
+Most published skills are prompt text with no executable substance behind
+them. These document the specific defects that make each task non-obvious:
+the cue-level dedupe required to parse rolling caption tracks correctly, the
+franchise denylist that removes false positives from OpenStreetMap's
+missing-website signal, the authentication behaviour that makes SAM.gov's
+demonstration key appear to be a routing error. That is the difference between
+a skill that demonstrates well and one that survives contact with production
+data.
 
 ## The full Operator Stack (11 skills)
 
-The paid stack adds the **build-and-sell layer** — the skills that turn leads
-and research into products and revenue:
+The paid stack adds the production layer — the skills that convert research
+and lead data into shippable artefacts and billable output:
 
 - **client-site-builder** — polished single-file websites for local businesses (themed by industry, schema.org, mobile-verified)
 - **cold-outreach-drafter** — "I already built you something" outreach with CAN-SPAM/TCPA rails baked in
