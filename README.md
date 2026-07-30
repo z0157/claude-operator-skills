@@ -1,6 +1,6 @@
 # Operator Skills — Claude Code skills for building things that make money
 
-Three free, production-grade skills for [Claude Code](https://claude.com/claude-code) —
+Four free, production-grade skills for [Claude Code](https://claude.com/claude-code) —
 distilled from real working pipelines, not voice-dumped guesses. Every pattern in
 these files has actually run: the lead finder has pulled 300+ real businesses per
 city, the research miner has processed 100-video channels, the govcon scout has
@@ -10,7 +10,8 @@ queried real federal award data.
 
 | Skill | What Claude learns to do |
 |---|---|
-| **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe & mine any YouTube video or entire channel — no API, no Whisper. Correct VTT dedupe (the part everyone gets wrong), channel-scale distillation, claim extraction. |
+| **[media-transcriber](skills/media-transcriber/SKILL.md)** | Transcribe **anything audible** — YouTube, TikTok, local files, or login-walled Instagram/FB with no captions. 3-tier pipeline (captions → audio download → browser-playback loopback recording) + local Whisper. Ships a runnable `transcribe.py`. |
+| **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe & mine any YouTube video or entire channel — no API. Correct VTT dedupe (the part everyone gets wrong), channel-scale distillation, claim extraction. |
 | **[local-lead-finder](skills/local-lead-finder/SKILL.md)** | Find businesses with **no website** in any city, free (OpenStreetMap). Opportunity scoring, chain/franchise filtering, phone/address enrichment. |
 | **[govcon-scout](skills/govcon-scout/SKILL.md)** | Research what the U.S. government buys and who wins — real award data by category/size/state (USAspending, no key) + live bid opportunities (SAM.gov). |
 
@@ -40,7 +41,7 @@ and the denylist that filters them; why SAM.gov's DEMO_KEY 404s and what
 actually works. That's the difference between a skill that demos well and one
 that ships.
 
-## The full Operator Stack (10 skills)
+## The full Operator Stack (11 skills)
 
 The paid stack adds the **build-and-sell layer** — the skills that turn leads
 and research into products and revenue:
