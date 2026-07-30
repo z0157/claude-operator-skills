@@ -39,10 +39,10 @@ intact.
 
 | Skill | What Claude learns to do |
 |---|---|
-| **[media-transcriber](skills/media-transcriber/SKILL.md)** | Transcribe **anything audible** — YouTube, TikTok, local files, or login-walled Instagram/FB with no captions. 3-tier pipeline (captions → audio download → browser-playback loopback recording) + local Whisper. Ships a runnable `transcribe.py`. |
-| **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe & mine any YouTube video or entire channel — no API. Correct VTT dedupe (the part everyone gets wrong), channel-scale distillation, claim extraction. |
-| **[local-lead-finder](skills/local-lead-finder/SKILL.md)** | Find businesses with **no website** in any city, free (OpenStreetMap). Opportunity scoring, chain/franchise filtering, phone/address enrichment. |
-| **[govcon-scout](skills/govcon-scout/SKILL.md)** | Research what the U.S. government buys and who wins — real award data by category/size/state (USAspending, no key) + live bid opportunities (SAM.gov). |
+| **[media-transcriber](skills/media-transcriber/SKILL.md)** | Transcribe any audible source — YouTube, TikTok, local files, or authenticated Instagram/Facebook content with no caption track. Three-tier pipeline: caption retrieval, audio extraction, then browser-playback loopback capture into local Whisper. Ships a runnable `transcribe.py`. |
+| **[youtube-research-miner](skills/youtube-research-miner/SKILL.md)** | Transcribe and mine a single video or an entire channel without the YouTube API. Correct cue-level VTT deduplication, channel-scale distillation, and claim extraction. |
+| **[local-lead-finder](skills/local-lead-finder/SKILL.md)** | Identify businesses with no web presence in any municipality via OpenStreetMap. Opportunity scoring, franchise filtering, and contact enrichment. No API keys required. |
+| **[govcon-scout](skills/govcon-scout/SKILL.md)** | Query federal procurement: award data by NAICS category, contract value, and state via USAspending, plus open solicitations via SAM.gov. |
 
 <a name="install"></a>
 
@@ -55,8 +55,7 @@ intact.
 /plugin install operator-skills@opforge
 ```
 
-That's it. You get all four skills, and `/plugin update` pulls new ones as
-they land.
+All four skills install together. Subsequent releases arrive via `/plugin update`.
 
 **Or copy the files manually**, if you'd rather not add a marketplace:
 
@@ -65,9 +64,9 @@ git clone https://github.com/z0157/claude-operator-skills
 cp -r claude-operator-skills/skills/* ~/.claude/skills/   # all projects
 ```
 
-Either way, just ask Claude Code naturally — "find businesses without websites
-in Boise", "transcribe this channel and find every revenue claim" — and it
-loads the right skill on its own.
+In either case, invoke them in natural language — "find businesses without
+websites in Boise", "transcribe this channel and extract every revenue claim"
+— and Claude Code resolves the appropriate skill automatically.
 
 ## Why these are different
 
@@ -85,21 +84,21 @@ data.
 The paid stack adds the production layer — the skills that convert research
 and lead data into shippable artefacts and billable output:
 
-- **client-site-builder** — polished single-file websites for local businesses (themed by industry, schema.org, mobile-verified)
-- **cold-outreach-drafter** — "I already built you something" outreach with CAN-SPAM/TCPA rails baked in
-- **pdf-product-factory** — sellable PDF products (forms, bundles, workbooks) from HTML/CSS at catalog scale
-- **spreadsheet-tool-builder** — Excel calculators with verified formulas (the anti-slop moat)
-- **stripe-no-sdk** — payments, subscriptions & payment links in plain REST
-- **micro-dashboard** — one-file Flask + SQLite control panels for any pipeline
-- **niche-demand-scout** — validate demand *before* building; score niches, write listing copy
+- **client-site-builder** — self-contained single-file websites for local businesses, themed per industry with schema.org LocalBusiness markup, verified at desktop and mobile breakpoints
+- **cold-outreach-drafter** — proof-of-work outreach sequences with CAN-SPAM and TCPA constraints enforced at the template level
+- **pdf-product-factory** — typeset PDF deliverables (forms, bundles, workbooks) rendered from HTML/CSS at catalogue scale
+- **spreadsheet-tool-builder** — Excel instruments whose formulas are verified against parallel Python computation before shipping
+- **stripe-no-sdk** — payments, subscriptions and payment links over plain REST, no SDK dependency
+- **micro-dashboard** — single-file Flask and SQLite control panels for arbitrary pipelines
+- **niche-demand-scout** — quantify demand prior to construction: score niches against live query data and derive listing copy
 
 **→ [Get the full Operator Stack — $34](https://opforge.gumroad.com/l/operator-stack)**
 · instant download · free updates · commercial license.
 
-Prefer to try first? **[Grab these 4 free skills as a zip](https://opforge.gumroad.com/l/operator-skills-free)**
-(pay what you want, $0 works) — same files as this repo, and you'll hear about
-new skills when they land.
+The four skills above are also packaged as a [downloadable archive](https://opforge.gumroad.com/l/operator-skills-free)
+on a pay-what-you-want basis, $0 included — identical to this repository, with
+release notifications.
 
 ## License
 
-Free skills: MIT — use them anywhere, including commercially.
+The four skills in this repository are MIT licensed, including for commercial use.
