@@ -92,7 +92,7 @@ and lead data into shippable artefacts and billable output:
 - **micro-dashboard** — single-file Flask and SQLite control panels for arbitrary pipelines
 - **niche-demand-scout** — quantify demand prior to construction: score niches against live query data and derive listing copy
 
-**→ [Get the full Operator Stack — $34](https://opforge.gumroad.com/l/operator-stack)**
+**→ [Get the full Operator Stack — $39](https://opforge.gumroad.com/l/operator-stack)**
 · instant download · free updates · commercial license.
 
 The four skills above are also packaged as a [downloadable archive](https://opforge.gumroad.com/l/operator-skills-free)
